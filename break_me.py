@@ -3,31 +3,31 @@
 def name():
     """Return a value after working around a NameError"""
     try:
-    	print(a)
+        print(a)
     except NameError:
-	print(1)
+        print("1")
 
 def typer():
     """Return a value after working around a TypeError"""
     try:
-	print(1+"recycle")
+        print(1+"recycle")
     except TypeError:
-	print("recycle")
+        print("recycle")
 
 def sintax():
     """Return a value after working around a SyntaxError"""
     try:
-        print('Those guys' taste in beer is terrible.')
+        x==3:
     except SyntaxError:
-        print("Those guys' taste in beer is terrible.")
+        print("Those guys taste in beer is terrible.")
 
 def attribute():
     """Return a value after working around a AttributeError"""
-        recycle="cans"
+    recycle="CANS"
     try:
-	recycle=recycle.lowr()
+        recycle=recycle.lowr()
     except AttributeError:
-	print(recycle.lower()
+        print(recycle.lower())
 
 
 """Call the functions."""
