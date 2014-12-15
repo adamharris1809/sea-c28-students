@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Creating lists"""
+"""Creating lists of fruit and manipulating them based on user preferences"""
 
 fruit = [u"Apples",u"Pears",u"Oranges",u"Peaches"]
 print(fruit)
@@ -9,10 +9,9 @@ print(fruit)
 more_fruit = raw_input(u"Input another fruit: ")
 fruit.append(more_fruit)
 print(fruit)
-print(len(fruit))
 fruitindex = [] #Creating for error checking below
 
-for index in range(len(fruit)):
+for index in range(len(fruit)): #Next time use isnumeric function. Slightly shorter method.
     fruitindex.append(str(index))
 fruitindex.remove("0")
 
@@ -55,10 +54,7 @@ while more_fruit in pfruits:
 
 print(pfruits, "After fruit removal and doubled")
 
-removallist=[] #list of fruits to remove after user completes the questionaire below.
-likelist=[] #list of fruits that remains after user identifies their preferences below.
-count = 0 #counter
-count1 = 0 #second counter
+count, count1 = 0,0 #counters
 pfruitscopy = pfruits[:] #Creating a copy in order to analyze list results of questionaire
 
 fruitstoquestion = [] #Creating a list of fruits for questionaire below.
@@ -66,22 +62,29 @@ for count in range(len(pfruits)):
     while pfruits[count] not in fruitstoquestion:
         fruitstoquestion.append(pfruits[count])
 
+
 #Questionaire of user preference for fruits.
 print(fruitstoquestion, "Fruits to question")
 
 for count1 in range(len(fruitstoquestion)):
-    userpref = raw_input(u"Do you like %s? Please respond Yes or No. Trial" % fruitstoquestion[count1])
+    userpref = raw_input(u"Do you like %s? Please respond Yes or No." % fruitstoquestion[count1].lower())
     while userpref!="Yes" and userpref!="No":
-        userpref = raw_input(u"Do you like %s? Please respond Yes or No. No Me Gusta" % fruitstoquestion[count1])
+        userpref = raw_input(u"Do you like %s? Please respond Yes or No." % fruitstoquestion[count1].lower())
     if userpref == "No":
         while fruitstoquestion[count1] in pfruitscopy:
             pfruitscopy.remove(fruitstoquestion[count1])
 
-"""while userlike not in pfruits:
-    while pfruits[count] in removallist:
-        count+=1
-    while pfruits[count] in likelist:
-        count+=1"""
-
 print(pfruits, "Original list")
 print(pfruitscopy, "Updated list with user preferences")
+
+#Last part of Task 1 - Reversal section
+
+pfruitsreverse = pfruits[:] #Creating a copy in order to reverse letters of each fruit
+for reversal in range(len(pfruitsreverse)):
+    pfruitsreverse[reversal] = pfruitsreverse[reversal][::-1]
+print(pfruitsreverse, "Fruits in reverse")
+pfruits.pop()
+print(pfruits, "Original list with the last item removed.")
+print("Boom.")
+
+
