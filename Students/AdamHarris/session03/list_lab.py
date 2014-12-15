@@ -43,4 +43,22 @@ pfruits=[]
 for findp in range(len(fruit)):
     if fruit[findp][0]=="P" or fruit[findp][0]=="p":
         pfruits.append(fruit[findp])
-print(pfruits)
+
+#End of section one for homework.
+print(pfruits, "P Fruits list")
+pfruits.pop()
+print(pfruits, "Removed ending")
+
+pfruits=pfruits*2 #Doubling the list size.
+
+#Identifying which fruit to remove from the list & removing all instances of it.
+more_fruit = raw_input(u"Input a fruit to remove: ")
+while more_fruit not in pfruits:
+    more_fruit = raw_input(u"No instance found. Input a fruit to remove all instances: ")
+while more_fruit in pfruits:
+    pfruits.remove(more_fruit)
+
+print(pfruits, "After Popcount removal")
+
+userlike = raw_input(u"Do you like %s?" % pfruits[0])
+print(userlike)
