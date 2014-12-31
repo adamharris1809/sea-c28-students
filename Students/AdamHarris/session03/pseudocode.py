@@ -1,5 +1,5 @@
-def get_user_input(prompt, *donor_list, validator = X or Y selection):
-    """Prompt user to Send a Thank You or Create a Report. Validate that the user
+def get_user_input(prompt, *donor_list, validator = X, Y, or Z selection):
+    """Prompt user to Send a Thank You, Create a Report, or Exit. Validate that the user
     selects one or the other.
     """
 
@@ -29,10 +29,12 @@ def get_user_input(prompt, *donor_list, validator = X or Y selection):
         print(email_input)
         get_user_input()
 
+    elif prompt == 'Exit'
+        return
+
     else:
         #Look up all names and corresponding donations in dictionary.
         #Create list of the donors and donations from dictionary.
         #Create separate sort function that sorts all donations by highest value.
         #Create separate sort function that sums all donations.
         print(donor_report)
-

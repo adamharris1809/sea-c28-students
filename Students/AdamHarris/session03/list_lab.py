@@ -86,5 +86,3 @@ print(pfruitsreverse, "Fruits in reverse")
 pfruits.pop()
 print(pfruits, "Original list with the last item removed.")
 print("Boom.")
-
-
