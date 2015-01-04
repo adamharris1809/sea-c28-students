@@ -39,11 +39,3 @@ s4 = {x for x in range(21) if x%4==0}
    I couldn't quite figure it out, but I learned a lot(!)
 """
 s2,s3,s4 = [{x for x in range(21) if not x % y} for y in range(2,5)]
-
-#Create a function that returns a list of n functions that when called will return input value //
-#by an increasing number.
-
-
-print([lambda x,y: x+y for y in range(num)])
-
-super_list = 
