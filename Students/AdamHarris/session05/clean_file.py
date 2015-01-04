@@ -2,13 +2,16 @@ import io
 import sys
 
 def clean_file(name_fileinput, name_fileoutput):
-    f_inlines = io.open(name_fileinput).read()
-    #inlines = io.open(name_fileinput).readlines() - test the difference.
-    f_outlines = f_input.strip()
+    f_inlines = io.open(name_fileinput).readlines()
+    f_outlines = map(string.strip, f_input)
     f_outfile = io.open(name_fileoutput, 'w')
     for line in f_outlines:
         f_outfile.write(line"\n")
 
+def clean_file_LC(name_fileinput, name_fileoutput):
+    f_inlines = io.open(name_fileinput).readlines()
+    f_outlines = [line"\n".strip() for line in f_inlines]
+    f_outfile = io.open(name_fileoutput, 'w'), write(f_outlines)
 
 if __name__ == "__main__":
     filename = sys.argv[1]
