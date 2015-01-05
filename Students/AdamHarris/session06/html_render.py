@@ -4,7 +4,7 @@ class Element(object):
     """Create an html object."""
     opening_tag = "<>"
     closing_tag = "</>"
-    tag = u"html"
+    tag = u"<html>"
     indent = "    "
 
     def __init__(self, content = "", **kwargs):
@@ -50,8 +50,18 @@ class br(SelfClosingTag):
     tag = u"<br />"
 
 class A(Element):
-    tag = u"html"
+    tag = u"<html>"
     def __init__(self, link, content):
         Element.__init__(self, link, content)
 
+class Ul(Element):
+    tag = u"<ul>"
 
+class Li(Element):
+    tag = u"<ul>"
+
+class Header(OneLineTag):
+
+    def __init__(self, integer, content):
+        self.tag = "<h"+string(integer)+">"
+        Element.__init__(self, integer, content)
