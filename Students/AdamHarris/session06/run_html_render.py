@@ -3,9 +3,9 @@
 import codecs
 import cStringIO
 
-import html_render as hr
+import html_render
 
-page = hr.Element()
+page = html_render.Element()
 
-page.append(u"Paragraph")
+print(page)
 

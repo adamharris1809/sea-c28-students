@@ -27,7 +27,7 @@ class p(Element):
     tag = u'<p>'
 
 class head(Element):
-    tag = u'<meta charset="UTF-8" />'+'<head>'
+    tag = u"<meta charset='UTF-8' />"+"<head>"
 
 class OneLineTag(Element):
     """Override the render method to render everything on one line."""
@@ -74,5 +74,5 @@ class Html(Element):
         Element.render(self, file_out, ind)
 
 class meta(SelfClosingTag):
-    tag = "<meta charset="UTF-8" />"
+    tag = "<meta charset='UTF-8' />"
 
