@@ -38,3 +38,14 @@ class OneLineTag(Element):
 
 class Title(OneLineTag):
     tag = u"<title>"
+
+class SelfClosingTag(Element):
+    def render(self, file_out, ind = ""):
+        all_out = self.tag
+
+class hr(SelfClosingTag):
+    tag = "<hr />"
+
+class br(SelfClosingTag):
+    tag = "<br />"
+
