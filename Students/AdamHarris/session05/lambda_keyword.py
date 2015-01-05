@@ -10,3 +10,10 @@ def function_builder(num):
 
 def function_builder(num):
     return([lambda x, y=y: x+y for y in range(num)])
+
+if __name__ == "__main__":
+    growing_list = function_builder(4)
+    assert growing_list[0](2) == 2
+    assert growing_list[1](2) == 3
+    for f in growing_list:
+        print(f(5))
