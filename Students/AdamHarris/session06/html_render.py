@@ -7,13 +7,15 @@ class Element(object):
     tag = u"html"
     indent = "    "
 
-    def __init__(self, content = ""):
+    def __init__(self, content = "", **kwargs):
+        if kwargs:
+            self.attribute = kwargs
 
     def append(self, add_content):
         content.append(add_content)
 
     def render(self, file_out, ind = ""):
-        all_out = [self.opening_tag] + self + append.content + self.closing_tag
+        all_out = [self.opening_tag] + self + append.content + self.kwargs + [self.closing_tag]
         print "\n".join(all_out)
         file_out.write(all_out)
 
