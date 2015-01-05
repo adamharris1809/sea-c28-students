@@ -44,8 +44,14 @@ class SelfClosingTag(Element):
         all_out = self.tag
 
 class hr(SelfClosingTag):
-    tag = "<hr />"
+    tag = u"<hr />"
 
 class br(SelfClosingTag):
-    tag = "<br />"
+    tag = u"<br />"
+
+class A(Element):
+    tag = u"html"
+    def __init__(self, link, content):
+        Element.__init__(self, link, content)
+
 
